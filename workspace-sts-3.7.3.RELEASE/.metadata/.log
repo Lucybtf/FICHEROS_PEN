@@ -1,0 +1,1053 @@
+!SESSION 2016-07-19 09:24:16.192 -----------------------------------------------
+eclipse.buildId=3.7.3.201602250940-RELEASE-e45
+java.version=1.8.0_91
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_ES
+Framework arguments:  -product org.springsource.sts.ide
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.springsource.sts.ide
+
+This is a continuation of log file E:\workspace-sts-3.7.3.RELEASE\.metadata\.bak_0.log
+Created Time: 2016-07-19 09:33:43.148
+
+!ENTRY org.eclipse.ui.workbench 4 2 2016-07-19 09:33:44.271
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2868)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1900)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3298)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2693)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2857)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1962)
+	at org.eclipse.jdt.internal.core.JavaProject.isOnClasspath(JavaProject.java:2240)
+	at org.eclipse.jdt.internal.ui.BuildpathIndicatorLabelDecorator.getOverlay(BuildpathIndicatorLabelDecorator.java:48)
+	at org.eclipse.jdt.internal.ui.BuildpathIndicatorLabelDecorator.decorate(BuildpathIndicatorLabelDecorator.java:35)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:273)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:367)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:349)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:372)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:332)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui 4 4 2016-07-19 09:33:44.337
+!MESSAGE Exception in Decorator. The 'Java Build Path Indicator' decorator will be disabled.
+!SUBENTRY 1 org.eclipse.ui 4 4 2016-07-19 09:33:44.338
+!MESSAGE java.lang.NullPointerException
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2868)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1900)
+	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3298)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2693)
+	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:2857)
+	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:1962)
+	at org.eclipse.jdt.internal.core.JavaProject.isOnClasspath(JavaProject.java:2240)
+	at org.eclipse.jdt.internal.ui.BuildpathIndicatorLabelDecorator.getOverlay(BuildpathIndicatorLabelDecorator.java:48)
+	at org.eclipse.jdt.internal.ui.BuildpathIndicatorLabelDecorator.decorate(BuildpathIndicatorLabelDecorator.java:35)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorDefinition.decorate(LightweightDecoratorDefinition.java:273)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager$LightweightRunnable.run(LightweightDecoratorManager.java:83)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.decorate(LightweightDecoratorManager.java:367)
+	at org.eclipse.ui.internal.decorators.LightweightDecoratorManager.getDecorations(LightweightDecoratorManager.java:349)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:372)
+	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:332)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.osgi 2 0 2016-07-19 09:33:45.439
+!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.BuildPathManager", thread "Thread[Worker-12,5,main]" timed out waiting (5001ms) for thread "Thread[org.eclipse.wst.sse.ui.internal.reconcile.StructuredRegionProcessor,1,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.6.2.20150902-0002 [595]". To avoid deadlock, thread "Thread[Worker-12,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.BuildPathManager" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.m2e.jdt"; type="osgi.bundle"; version:Version="1.6.2.20150902-0002"; singleton:="true" [id=595] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2868)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:2774)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2814)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1895)
+	at org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4067)
+	at org.eclipse.jdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:36)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-07-19 09:33:45.558
+!MESSAGE An internal error occurred during: "Initializing Java Tooling".
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:2868)
+	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:2774)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2241)
+	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:2814)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:1895)
+	at org.eclipse.jdt.core.JavaCore.initializeAfterLoad(JavaCore.java:4067)
+	at org.eclipse.jdt.internal.ui.InitializeAfterLoadJob$RealJob.run(InitializeAfterLoadJob.java:36)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.osgi 2 0 2016-07-19 09:34:17.395
+!MESSAGE While loading class "org.eclipse.m2e.core.MavenPlugin", thread "Thread[Worker-8,5,main]" timed out waiting (5001ms) for thread "Thread[org.eclipse.wst.sse.ui.internal.reconcile.StructuredRegionProcessor,1,main]" to finish starting bundle "org.eclipse.m2e.core_1.6.2.20150902-0002 [590]". To avoid deadlock, thread "Thread[Worker-8,5,main]" is proceeding but "org.eclipse.m2e.core.MavenPlugin" may not be fully initialized.
+!STACK 0
+org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; osgi.identity="org.eclipse.m2e.core"; type="osgi.bundle"; version:Version="1.6.2.20150902-0002"; singleton:="true" [id=590] STARTED [STARTED]
+	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:329)
+	at org.eclipse.osgi.container.Module.start(Module.java:389)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.springframework.ide.eclipse.maven.MavenCorePlugin.isPresent(MavenCorePlugin.java:57)
+	at org.springframework.ide.eclipse.maven.MavenCorePlugin.<clinit>(MavenCorePlugin.java:52)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:941)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:318)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:327)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:402)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:352)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:344)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:573)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:294)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:289)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:120)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:68)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2852)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.jst.jsp.core 4 4 2016-07-19 09:41:06.037
+!MESSAGE A workspace crash was detected. The previous session did not exit normally. Not using saved taglib indexes.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-19 09:42:50.032
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-19 09:42:53.475
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2016-07-19 09:56:42.953
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2016-07-19 09:56:42.954
+!MESSAGE session context was:(profile=DefaultProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.core,3.8.0.201606300804-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.livegraph,3.8.0.201606300804-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.reloading,3.8.0.201606300804-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.ui,3.8.0.201606300804-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,javaewah,0.7.9.v201605172130
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,net.mihai-nita.ansicon.plugin,1.3.3.201605090119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.aspectj.ajde,1.8.9.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.aspectj.runtime,1.8.9.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.aspectj.weaver,1.8.9.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.core,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.doc.user,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.examples,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.mylyn.ui,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.ui,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.aspectj,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.branding.core,1.0.2.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.branding.ui,1.0.2.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.core,1.0.105.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.rse,1.0.1.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.standalone.core,1.0.3.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.standalone.ui,1.0.3.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.ui,1.0.104.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.verify.ui,1.0.1.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.visualiser,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.weaving.jdt,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.xref.core,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.xref.ui,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.954
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.core,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.doc,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.mylyn.ui,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.ui,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.weaving.aspectj,1.0.400.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit.archive,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.archetype.common,1.7.0.20160603-1931
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core.ui,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.discovery,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor.xml,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.955
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.956
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt.ui,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.956
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.launching,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.956
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.lifecyclemapping.defaults,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.956
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.logback.appender,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.956
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.logback.configuration,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.indexer,1.7.0.20160603-1931
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime,1.7.0.20160603-1931
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime.slf4j.simple,1.7.0.20160603-1931
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.model.edit,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.core,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.ui,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.refactoring,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.scm,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.sonatype.m2e.buildhelper,0.15.0.201212120353
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.sonatype.m2e.mavenarchiver,0.17.1.201605251832-signed-20160525150658
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.aop,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.beans,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.context,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.context.support,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.core,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.957
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.data.core,1.11.4.20160223-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.expression,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.ajdt.ui.visualiser,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.ajdt.ui.xref,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.mylyn,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.ui,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.ui.matcher,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.batch,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.core.autowire,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.core.metadata,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.mylyn,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.autowire,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.editor,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.graph,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.livegraph,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.refactoring,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.958
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.search,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.bestpractices,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.dash,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.launch,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.properties.editor,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.properties.editor.yaml,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.buildship,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.cloudfoundry.manifest.editor,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.config.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.config.graph,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.config.ui,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.data.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.959
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.doc,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.editor.support,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.gradle,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.integration,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.maven,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.metadata,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.mylyn,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.quickfix,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.security,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.ui,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.mylyn,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.ui,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.ui.editor,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.ui.graph,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.wizard,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.jdbc,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.jms,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.orm,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.oxm,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.transaction,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.web,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.web.servlet,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.browser,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.cloudfoundry.client,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.completions,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.configurator,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.content.core,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.core,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.960
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.frameworks.core,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.frameworks.ui,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.gettingstarted,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.livexp,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.quicksearch,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.ui,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.dashboard.ui,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.sts,3.8.0.201606301131-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,com.vmware.vfabric.ide.eclipse.tcserver,3.8.0.201606300804-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,io.projectreactor.reactor-core,2.5.0.M5-BUILD-201606231640
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,net.mihai-nita.ansicon,1.3.3.201605090119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.aspectj,1.8.9.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.ajdt,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.cft.server.core.feature,1.0.5.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.cft.server.ui.feature,1.0.4.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.contribution.weaving,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.contribution.xref,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit.mylyn,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.weaving.sdk,1.2.0.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.jgit,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.feature,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.importer,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.logback.feature,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.reactivestreams.reactive-streams,1.0.0.release
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.sonatype.m2e.buildhelper.feature,0.15.0.201212120353
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.sonatype.m2e.mavenarchiver.feature,0.17.1.201605251832-signed-20160525150658
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.ajdt.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.aop.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.autowire.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.batch.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.boot.dash.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.boot.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.restart,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.templates,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.wizard,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.961
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.data.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.imports,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.integration.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.maven.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.mylyn.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.security.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.webflow.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.cloudfoundry.client.v2,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.ide.eclipse.commons,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.ide.eclipse.commons.quicksearch.feature,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.ide.eclipse.dashboard,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.sts,3.8.0.201606301131-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: binary,org.springsource.sts.ide.executable.win32.win32.x86,3.8.0.201606301131-RELEASE-e45
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.sts.package,3.8.0.201606301131-RELEASE-e45
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:42.962
+!MESSAGE No repository found containing: binary,org.springsource.sts.package_root,3.8.0.201606301131-RELEASE-e45
+
+!ENTRY org.eclipse.equinox.p2.engine 4 4 2016-07-19 09:56:55.715
+!MESSAGE An error occurred while collecting items to be installed
+!SUBENTRY 1 org.eclipse.equinox.p2.engine 4 0 2016-07-19 09:56:55.715
+!MESSAGE session context was:(profile=DefaultProfile, phase=org.eclipse.equinox.internal.p2.engine.phases.Collect, operand=, action=).
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.core,3.8.0.201606300804-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.livegraph,3.8.0.201606300804-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.reloading,3.8.0.201606300804-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,com.vmware.vfabric.ide.eclipse.tcserver.ui,3.8.0.201606300804-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,javaewah,0.7.9.v201605172130
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,net.mihai-nita.ansicon.plugin,1.3.3.201605090119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,org.aspectj.ajde,1.8.9.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,org.aspectj.runtime,1.8.9.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,org.aspectj.weaver,1.8.9.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.core,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.715
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.doc.user,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.examples,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.mylyn.ui,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.ajdt.ui,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.aspectj,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.branding.core,1.0.2.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.branding.ui,1.0.2.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.core,1.0.105.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.rse,1.0.1.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.standalone.core,1.0.3.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.standalone.ui,1.0.3.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.ui,1.0.104.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.cft.server.verify.ui,1.0.1.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.visualiser,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.weaving.jdt,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.xref.core,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.contribution.xref.ui,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.core,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.doc,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.mylyn.ui,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.egit.ui,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.equinox.weaving.aspectj,1.0.400.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.jgit.archive,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.archetype.common,1.7.0.20160603-1931
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.core.ui,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.discovery,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.editor.xml,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.jdt.ui,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.launching,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.lifecyclemapping.defaults,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.logback.appender,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.716
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.logback.configuration,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.indexer,1.7.0.20160603-1931
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime,1.7.0.20160603-1931
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.maven.runtime.slf4j.simple,1.7.0.20160603-1931
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.model.edit,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.core,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.profiles.ui,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.refactoring,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.scm,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.sonatype.m2e.buildhelper,0.15.0.201212120353
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.sonatype.m2e.mavenarchiver,0.17.1.201605251832-signed-20160525150658
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.aop,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.beans,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.context,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.context.support,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.core,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.data.core,1.11.4.20160223-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.expression,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.ajdt.ui.visualiser,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.ajdt.ui.xref,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.mylyn,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.ui,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.aop.ui.matcher,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.batch,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.core.autowire,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.core.metadata,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.mylyn,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.autowire,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.editor,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.graph,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.livegraph,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.refactoring,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.beans.ui.search,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.bestpractices,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.dash,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.717
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.launch,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.properties.editor,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.properties.editor.yaml,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.buildship,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.cloudfoundry.manifest.editor,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.config.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.config.graph,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.config.ui,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.data.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.doc,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.editor.support,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.gradle,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.integration,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.maven,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.metadata,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.mylyn,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.quickfix,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.security,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.ui,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.core,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.mylyn,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.ui,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.ui.editor,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.webflow.ui.graph,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.wizard,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.jdbc,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.jms,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.orm,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.oxm,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.transaction,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.web,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.web.servlet,4.3.0.20160611-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.browser,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.cloudfoundry.client,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.completions,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:55.718
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.configurator,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.806
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.content.core,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.806
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.core,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.806
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.frameworks.core,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.806
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.frameworks.ui,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.806
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.gettingstarted,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.806
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.livexp,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.806
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.quicksearch,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.806
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.ui,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.dashboard.ui,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.sts,3.8.0.201606301131-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,com.vmware.vfabric.ide.eclipse.tcserver,3.8.0.201606300804-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: osgi.bundle,io.projectreactor.reactor-core,2.5.0.M5-BUILD-201606231640
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,net.mihai-nita.ansicon,1.3.3.201605090119
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.aspectj,1.8.9.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.ajdt,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.cft.server.core.feature,1.0.5.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.cft.server.ui.feature,1.0.4.v201606211648
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.contribution.weaving,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.contribution.xref,2.2.4.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.egit.mylyn,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.807
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.equinox.weaving.sdk,1.2.0.201604061446
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.jgit,4.4.0.201606070830-r
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.feature,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: osgi.bundle,org.eclipse.m2e.importer,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.eclipse.m2e.logback.feature,1.7.0.20160603-1933
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: osgi.bundle,org.reactivestreams.reactive-streams,1.0.0.release
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.sonatype.m2e.buildhelper.feature,0.15.0.201212120353
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.sonatype.m2e.mavenarchiver.feature,0.17.1.201605251832-signed-20160525150658
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.ajdt.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.aop.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.autowire.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.batch.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.808
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.boot.dash.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.809
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.boot.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.809
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.restart,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.809
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.templates,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.809
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.boot.wizard,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.809
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.data.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.810
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.811
+!MESSAGE No repository found containing: osgi.bundle,org.springframework.ide.eclipse.imports,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.811
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.integration.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.811
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.maven.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.811
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.mylyn.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.811
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.security.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.811
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springframework.ide.eclipse.webflow.feature,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.811
+!MESSAGE No repository found containing: osgi.bundle,org.springsource.ide.eclipse.commons.cloudfoundry.client.v2,3.8.0.201606301005-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.812
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.ide.eclipse.commons,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.812
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.ide.eclipse.commons.quicksearch.feature,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.812
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.ide.eclipse.dashboard,3.8.0.201606300730-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.812
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.sts,3.8.0.201606301131-RELEASE
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.812
+!MESSAGE No repository found containing: binary,org.springsource.sts.ide.executable.win32.win32.x86,3.8.0.201606301131-RELEASE-e45
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.812
+!MESSAGE No repository found containing: org.eclipse.update.feature,org.springsource.sts.package,3.8.0.201606301131-RELEASE-e45
+!SUBENTRY 1 org.eclipse.equinox.p2.artifact.repository 4 0 2016-07-19 09:56:56.812
+!MESSAGE No repository found containing: binary,org.springsource.sts.package_root,3.8.0.201606301131-RELEASE-e45
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2016-07-19 10:37:45.285
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Communication with repository at http://download.eclipse.org/cft/1.0.M3.1/ failed.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:202)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.getLocalFile(CompositeMetadataRepositoryFactory.java:73)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:98)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:197)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 1002 2016-07-19 10:37:45.289
+!MESSAGE Communication with repository at http://download.eclipse.org/cft/1.0.M3.1/ failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:197)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2016-07-19 10:42:49.723
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: Communication with repository at http://download.eclipse.org/jetty/updates/jetty-wtp/ failed.
+	at org.eclipse.equinox.internal.p2.repository.CacheManager.createCache(CacheManager.java:202)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.getLocalFile(CompositeMetadataRepositoryFactory.java:73)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:98)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:668)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.doLoad(LoadMetadataRepositoryJob.java:117)
+	at org.eclipse.equinox.p2.ui.LoadMetadataRepositoryJob.runModal(LoadMetadataRepositoryJob.java:102)
+	at org.eclipse.equinox.internal.p2.ui.sdk.PreloadingRepositoryHandler$2.runModal(PreloadingRepositoryHandler.java:83)
+	at org.eclipse.equinox.p2.operations.ProvisioningJob.run(ProvisioningJob.java:177)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:197)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	... 1 more
+!SUBENTRY 1 org.eclipse.equinox.p2.repository 4 1002 2016-07-19 10:42:49.726
+!MESSAGE Communication with repository at http://download.eclipse.org/jetty/updates/jetty-wtp/ failed.
+!STACK 0
+java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at java.net.SocketInputStream.read(Unknown Source)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:160)
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:84)
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:273)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:140)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:283)
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:251)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.receiveResponseHeader(ManagedClientConnectionImpl.java:197)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:685)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:487)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:259)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-19 10:45:42.433
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-19 10:45:43.545
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-19 10:45:45.557
+!MESSAGE The POM for org.apache.maven.plugins:maven-clean-plugin:jar:2.5 is missing, no dependency information available
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-19 10:45:47.216
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-19 10:45:51.089
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-07-19 10:45:52.176
+!MESSAGE Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.egit.core 4 0 2016-07-19 10:51:10.081
+!MESSAGE An exception occurred during push on URI https://github.com/Lucybtf/TFM_ARTILLERIA.git: Nothing to push.
+!STACK 0
+org.eclipse.jgit.errors.TransportException: Nothing to push.
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1238)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:189)
+	at org.eclipse.egit.ui.internal.push.PushWizard$PushJob.run(PushWizard.java:297)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.egit.ui 4 0 2016-07-19 10:51:11.155
+!MESSAGE Can't connect to any repository: https://github.com/Lucybtf/TFM_ARTILLERIA.git (Nothing to push.)

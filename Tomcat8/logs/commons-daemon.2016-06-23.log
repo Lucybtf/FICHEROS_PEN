@@ -1,0 +1,23 @@
+[2016-06-23 09:19:47] [info]  [ 7988] Commons Daemon procrun (1.0.15.0 32-bit) started
+[2016-06-23 09:19:47] [info]  [ 7988] Service Tomcat8 name Apache Tomcat 8.0 Tomcat8
+[2016-06-23 09:19:47] [info]  [ 7988] Service 'Tomcat8' installed
+[2016-06-23 09:19:47] [info]  [ 7988] Commons Daemon procrun finished
+[2016-06-23 09:20:16] [info]  [ 8200] Commons Daemon procrun (1.0.15.0 32-bit) started
+[2016-06-23 09:20:16] [info]  [ 8200] Updating service...
+[2016-06-23 09:20:16] [info]  [ 8200] Service 'Tomcat8' updated
+[2016-06-23 09:20:16] [info]  [ 8200] Update service finished.
+[2016-06-23 09:20:16] [info]  [ 8200] Commons Daemon procrun finished
+[2016-06-23 09:20:16] [info]  [ 4904] Commons Daemon procrun (1.0.15.0 32-bit) started
+[2016-06-23 09:20:16] [info]  [ 4904] Updating service...
+[2016-06-23 09:20:17] [info]  [ 4904] Service 'Tomcat8' updated
+[2016-06-23 09:20:17] [info]  [ 4904] Update service finished.
+[2016-06-23 09:20:17] [info]  [ 4904] Commons Daemon procrun finished
+[2016-06-23 09:20:17] [info]  [ 4176] Commons Daemon procrun (1.0.15.0 32-bit) started
+[2016-06-23 09:20:17] [info]  [ 4176] Updating service...
+[2016-06-23 09:20:17] [info]  [ 4176] Service 'Tomcat8' updated
+[2016-06-23 09:20:17] [info]  [ 4176] Update service finished.
+[2016-06-23 09:20:17] [info]  [ 4176] Commons Daemon procrun finished
+[2016-06-23 09:23:15] [info]  [ 7524] Commons Daemon procrun (1.0.15.0 32-bit) started
+[2016-06-23 09:23:16] [info]  [ 7524] Running 'Tomcat8' Service...
+[2016-06-23 09:23:16] [info]  [ 9400] Starting service...
+[2016-06-23 09:23:19] [info]  [ 9400] Service started in 2750 ms.

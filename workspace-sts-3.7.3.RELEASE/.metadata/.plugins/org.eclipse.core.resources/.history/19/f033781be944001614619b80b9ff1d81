@@ -1,0 +1,176 @@
+package com.webproject;
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+//import org.springframework.*;
+
+//import javax.servlet.http.HttpServletRequest;
+//import javax.servlet.http.HttpServletResponse;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+import com.webproject.QueryEndpoint;
+
+@Controller
+@RequestMapping("/")
+public class WebAppController {
+
+/*	protected ModelAndView handleRequestInternal(HttpServletRequest request,
+		HttpServletResponse response) throws Exception {
+
+		ModelAndView model = new ModelAndView("HelloWorldPage");
+		model.addObject("msg", "hello world");
+		
+		return model;
+	}*/
+	String preffixes="PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
+			+ "PREFIX skos: <http://www.w3.org/2004/02/skos/core#>"
+			+ "PREFIX awv: <http://lod.uca.es/neologism/awv#>"
+			+ "PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>"
+			+ "PREFIX qudt: <http://qudt.org/schema/qudt#>"
+			+ "PREFIX msr: <http://www.telegraphis.net/ontology/measurement/measurement#>"
+			+ "PREFIX dc: <http://purl.org/dc/elements/1.1/>";
+	
+	@RequestMapping(method = RequestMethod.GET)
+	   public String printHello(ModelMap model) {
+	      model.addAttribute("message", "Hello Spring MVC Framework!");
+	      return "index";
+	   }
+
+	
+	@RequestMapping("/page")
+	public ModelAndView getdata(){
+		
+		String queryString= preffixes+ "SELECT ?weapon_identifier ?definition ?type_of_weapon ?calibre_A ?nationality ?origin ?date ?material ?observations ?type_piece"
+				+ " WHERE {"
+				+ " ?weapon_basic_information  rdf:type awv:weapon_basic_information;"
+				+ "awv:weapon_identifier ?weapon_identifier;"
+				+ "awv:calibre_of_A ?calibre_A;"
+				+ "skos:definition ?definition;"
+				+ "awv:type_of_weapon ?type_of_weapon;"
+				+ " awv:type_of_piece ?type_piece."
+				+ "OPTIONAL { ?weapon_basic_information awv:place_of_origin ?origin. }"
+				+ "OPTIONAL { ?weapon_basic_information awv:material ?material. }"
+				+ "OPTIONAL { ?weapon_basic_information dbpedia-owl:nationality ?nationality. }"
+				+ "OPTIONAL {  ?weapon_basic_information  awv:date_of_collection ?date. }"
+				+ "OPTIONAL { ?weapon_basic_information  awv:observations ?observations. }"
+				+"}";
+				
+		QueryEndpoint query=new QueryEndpoint();
+		List<Map<String, String>> p=query.QueryEndpointSelect(queryString);
+		
+		/*for(int i=0; i< p.size();i++){
+			//System.out.println(i);
+			System.out.println(i+" "+p.get(i)+ "\n");
+		}*/
+		//System.out.println(results);
+		ModelAndView model = new ModelAndView("page");
+		model.addObject("lists", p);
+		return model;
+	}
+	
+	/*Sacar los valores de las medidas de un arma. 
+	 * HACE FALTA SACAR LOS NOMBRES DE LAS VARIABLES*/
+	@RequestMapping("/informacion-total")
+	public ModelAndView getinformacion_total(){
+		QueryEndpoint query=new QueryEndpoint();
+		String queryStringIA= preffixes+ "SELECT ?weapon_identifier ?definition ?type_of_weapon ?calibre_A ?nationality ?origin ?date ?material ?observations ?type_piece"
+				+ " WHERE {"
+				+ " ?weapon_basic_information  rdf:type awv:weapon_basic_information;"
+				+ "awv:weapon_identifier ?weapon_identifier;"
+				+ "awv:calibre_of_A ?calibre_A;"
+				+ "skos:definition ?definition;"
+				+ "awv:type_of_weapon ?type_of_weapon;"
+				+ " awv:type_of_piece ?type_piece."
+				+ "OPTIONAL { ?weapon_basic_information awv:place_of_origin ?origin. }"
+				+ "OPTIONAL { ?weapon_basic_information awv:material ?material. }"
+				+ "OPTIONAL { ?weapon_basic_information dbpedia-owl:nationality ?nationality. }"
+				+ "OPTIONAL {  ?weapon_basic_information  awv:date_of_collection ?date. }"
+				+ "OPTIONAL { ?weapon_basic_information  awv:observations ?observations. }"
+				+"FILTER(?weapon_identifier=1)"
+				+"}";
+		List<Map<String, String>> ia=query.QueryEndpointSelect(queryStringIA);
+		String queryStringAM=preffixes + "SELECT DISTINCT * WHERE {"
+				+"?morphological_analysis rdf:type awv:morphological_analysis;"
+				+"awv:weapon_identifier ?identifier;"
+				+"awv:beginning_chase_moulding ?chase_moulding;"
+				+"awv:beginning_first_reinforce_moulding ?first_moulding;"
+				+"awv:cascable ?cascable;"
+				+"awv:coat_of_arms ?coat_of_arms;"
+				+"awv:first_reinforce_ring ?first_reinforce;"
+				+"awv:muzzle_astragal ?muzzle_astragal;"
+				+"awv:muzzle_form ?muzzle;"
+				+"awv:number_of_members ?members;"
+				+"awv:observations ?observations;"
+				+"awv:other_reinforcing_rings ?others;"
+				+"awv:trunnion_form ?trunnion_form;"
+				+"FILTER(?identifier=1)"
+				+"}";
+		List<Map<String, String>> am=query.QueryEndpointSelect(queryStringAM);
+		/*Medidas dimensionales*/
+		String queryStringMD=preffixes + "SELECT DISTINCT ?description ?value WHERE {"
+				+ " ?Measurement rdf:type msr:Measurement;"
+				+ "awv:measure_identifier ?measure_id;" 
+				+ "dc:description ?description." 
+				+ " ?measurement_value rdf:type awv:measurement_value;"
+				+ "awv:weapon_identifier ?identifier;"
+				+ "awv:measure_identifier ?measure_id2."
+				+ "OPTIONAL { ?measurement_value qudt:value ?value. }"
+				+ "FILTER(?measure_id=?measure_id2)"
+				+ "FILTER(?identifier=1)"
+				+ "}";
+	
+		List<Map<String, String>> md=query.QueryEndpointSelect(queryStringMD);
+		ModelAndView model = new ModelAndView("informacion-total");
+		model.addObject("informarma", ia);
+		model.addObject("morfologico", am);
+		model.addObject("dimensional", md);
+		//int index='7';
+		//System.out.println(ia.get(index).get("type_piece"));
+		for(int i=0; i< ia.size();i++){
+		//System.out.println(i);
+			//System.out.println(i+" "+ia.get(i)+ "\n");
+			//if(ia.get(i).get("type_piece").equals("OBJETO EXCAVADO")){
+				System.out.println(i+" "+ia.get(i)+ "\n");
+			//}
+		}
+		return model;		
+	}
+	
+	@RequestMapping(value = "/usuario", method = RequestMethod.GET)
+	public ModelAndView usuario() {
+	return new ModelAndView("usuario", "command", new Usuario());
+	}
+
+	@RequestMapping(value = "/insertaUsuario", method = RequestMethod.POST)
+	public String insertaUsuario(@ModelAttribute("WebApp")Usuario usuario, ModelMap model) {
+	model.addAttribute("id", usuario.getId());
+	model.addAttribute("nombre", usuario.getNombre());
+	model.addAttribute("email", usuario.getEmail());
+
+	return "resultado";
+	}
+	
+	@RequestMapping(value = "/form_informacion_arma", method = RequestMethod.GET)
+	public ModelAndView informacionArma() {
+	return new ModelAndView("form_informacion_arma", "command", new InformacionArma());
+	}
+	
+	@RequestMapping(value = "/form_medidas_dimensionales", method = RequestMethod.GET)
+	public ModelAndView medidasDimensionales() {
+	return new ModelAndView("form_medidas_dimensionales", "command", new MedidasDimensionales());
+	}
+	
+	@RequestMapping(value = "/form_analisis_morfologico", method = RequestMethod.GET)
+	public ModelAndView analisisMorfologico() {
+	return new ModelAndView("form_analisis_morfologico", "command", new AnalisisMorfologico());
+	}
+	
+
+}
